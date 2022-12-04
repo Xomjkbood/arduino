@@ -18,8 +18,8 @@ Adafruit_BMP280 bmp; // I2C
 //Adafruit_BME280 bme(BME_CS, BME_MOSI, BME_MISO, BME_SCK); // software SPI
  
 // Replace with your network credentials
-const char* ssid     = "xomjkMi2.4";
-const char* password = "11121314155321981";
+const char* ssid     = "your ssid";
+const char* password = "password ssid";
  
 // Set web server port number to 80
 WiFiServer server(8084);
