@@ -10,8 +10,8 @@ void loop()
   float vol = voltage * 100;
   int voltproc = map(vol, 270, 420, 0, 100);
   if (vol > 270) {
-    lowbat = voltproc;
-    simproc = " %";
+      lowbat = voltproc;
+      simproc = " %";
   }
   else{
       lowbat = "Low Battery"; 
