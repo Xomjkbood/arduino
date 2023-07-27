@@ -4,19 +4,19 @@ void setup()
 }
 void loop()
 {
-  String lowbat;
+  String statusbat;                                //переменная статуса батареи
   String simproc;
-  float voltage = analogRead(A0) / 1024.0 * 9.0;
-  float vol = voltage * 100;
-  int voltproc = map(vol, 270, 420, 0, 100);
+  float voltage = analogRead(A0) / 1024.0 * 9.0;   //значение 9.0 подбирается от номинала резисторного делителя 
+  float vol = voltage * 100;                       
+  int voltproc = map(vol, 270, 420, 0, 100);       //мапим полученые значения к процентам
   if (vol > 270) {
-      lowbat = voltproc;
-      simproc = " %";
+    statusbat = voltproc;
+    simproc = " %";
   }
   else{
-      lowbat = "Low Battery"; 
+      statusbat = "Low Battery"; 
   }
-  Serial.print(lowbat);
+  Serial.print(statusbat);
   Serial.println(simproc);
   Serial.print(voltage);
   Serial.println(" v");
